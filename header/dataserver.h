@@ -20,9 +20,9 @@ char *dizionario = "dictionary_ita.txt";
 //File vuoto se non passo --matrici, altrimenti genera random
 char *data_filename="";
 //Tempo di attesa fine partita
-int tempo_attesa = 10;  
+int tempo_attesa = 60;  
 //Durata di una partita
-int durata = 10;
+int durata = 180;
 //Timer per segnare l'inizio e la fine della partita
 time_t inizio_partita;
 time_t fine_partita;

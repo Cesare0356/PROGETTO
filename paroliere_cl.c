@@ -182,6 +182,7 @@ void* receive_messages(void* arg) {
                 printf("[PROMPT PAROLIERE]-->\n");
             } 
             else if (msg.type == MSG_CLASSIFICA_PRONTA) {
+                //Richiedo la classifica finale
                 msg.type = MSG_PUNTI_FINALI;
                 send_message(client_socket, &msg);
             }

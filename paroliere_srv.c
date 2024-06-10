@@ -40,7 +40,7 @@ void handle_sigint() {
     }
     pthread_mutex_unlock(&mutex);
     //Chiudo il socket del server
-    SYSC(retvalue, close(server_socket), "nella close ao");
+    SYSC(retvalue, close(server_socket), "nella close");
     printf("Server chiuso\n");
     exit(EXIT_SUCCESS);
 }
@@ -498,7 +498,7 @@ void *thread_scorer(void *arg) {
     while (q != NULL) {
         score_t* score = pop_score(&q);
 
-        // Aggiungo il punteggio alla lista
+        //Aggiungo il punteggio alla lista
         score->next = scores_head;
         scores_head = score;
         count++;
