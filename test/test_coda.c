@@ -17,7 +17,6 @@ void* client_thread(void* arg) {
     score = rand()%50;
     //Lo aggiungo nella coda
     push_score(&queue,user,score);
-    printlist(queue);
     pthread_mutex_unlock(&mutex);
     pthread_exit(NULL);
 }
