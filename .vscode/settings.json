@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "matrix.h": "c",
+        "includes.h": "c",
+        "scorer.h": "c",
+        "dataserver.h": "c"
+    }
+}
