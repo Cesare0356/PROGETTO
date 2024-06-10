@@ -476,7 +476,7 @@ void* thread_client(void* arg) {
             }
             pthread_mutex_unlock(&mutex);
             //Se non ci sono client connessi e la partita era in corso, allora metto il server in attesa di nuovi client ai quali generare la partita
-            if(client_list == NULL && curr_state == STATO_INGIOCO) {
+            if(client_list == NULL && (curr_state == STATO_INGIOCO || curr_state == STATO_PAUSA)) {
                 curr_state = STATO_ATTESA;
                 alarm(0);
             }
@@ -532,7 +532,6 @@ void *thread_scorer(void *arg) {
         }
         strcat(buffer,"\n");
     }
-
     strcpy(classifica,buffer);
     
     //Informo tutti i client che possono richiedere la classifica
