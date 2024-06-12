@@ -569,7 +569,7 @@ int tempo_rim() {
         //Calcolo il tempo rimanente dalla fine della partita più il tempo di attesa
         int tempo_rimanente = difftime(fine_partita+tempo_attesa,ora);
         
-        // Restituisco il tempo rimanente
+        //Restituisco il tempo rimanente
         return tempo_rimanente>0?tempo_rimanente:0;
     }
 }

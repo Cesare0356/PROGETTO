@@ -136,7 +136,7 @@ int trova_parola(char matrix[N][N], int visited[N][N], char *parola, int index, 
     dy[0] = 0; dy[1] = -1; dy[2] = 1; dy[3] = 0; 
     //-1,0 => alto
     //0,-1 => sinistra
-    //0,1=> destra
+    //0,1 => destra
     //1,0 => basso
 
     //Se la cella corrente contiene 'Q' e la parola contiene "Qu"
@@ -156,7 +156,7 @@ int trova_parola(char matrix[N][N], int visited[N][N], char *parola, int index, 
         //Stesso procedimento di sopra
         visited[x][y] = 1;
         for (int i = 0; i < N; i++) {
-            //Vado avanti di due caratteri
+            //Vado avanti di un carattere
             if (trova_parola(matrix,visited,parola,index+1,x+dx[i],y+dy[i]))
                 return 1;
         }
